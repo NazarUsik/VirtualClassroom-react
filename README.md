@@ -1,6 +1,6 @@
 # [VirtualClassroom-react](https://virtual--classroom.herokuapp.com/)
 
-## This project does not work, its working version without ReactJS can be viewed [here](https://github.com/NazarUsik/VirtualClassroom.git)
+# This project does not work, its working version without ReactJS can be viewed [here](https://github.com/NazarUsik/VirtualClassroom.git)
 
 ## Technologies
 - Java 8
