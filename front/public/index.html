@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <link rel="stylesheet" type="text/css" href="./src/css/main.css "/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--    <script type="text/javascript" th:src="@{/src/components/utils.js}"></script>-->
+    <title>React App</title>
+</head>
+<body>
+<h1 style="text-align: center">Virtual Classroom</h1>
+<div id="root">
+
+</div>
+
+<div id="container">
+
+</div>
+
+<div id="chat-container">
+    <div class="chat-header">
+        <div class="user-container">
+            <span id="username">
+                <p id="uu"> </p>
+                <script type="text/javascript">
+                     function getCookie(cname) {
+                         const name = cname + "=";
+                         const decodedCookie = decodeURIComponent(document.cookie);
+                         const ca = decodedCookie.split(';');
+                         for (let i = 0; i < ca.length; i++) {
+                             let c = ca[i];
+                             while (c.charAt(0) === ' ') {
+                                 c = c.substring(1);
+                             }
+                             if (c.indexOf(name) === 0) {
+                                 return c.substring(name.length, c.length);
+                             }
+                         }
+                         return "";
+                     }
+
+                     document.getElementById('uu').innerText = getCookie("student_name");
+                </script>
+            </span>
+        </div>
+        <h3>Classroom Chat</h3>
+    </div>
+
+    <hr/>
+
+    <div id="connecting">Connecting...</div>
+    <ul id="messageArea">
+    </ul>
+    <div id="control-panel">
+        <form id="messageForm" name="messageForm">
+            <div class="input-message">
+                <input type="text" id="message" autocomplete="off"
+                       placeholder="Type a message..."/>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        <form id="raisedHand">
+            <button type="submit">raised a hand</button>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="sock_client.js"></script>
+
+</body>
+</html>
